@@ -1,3 +1,53 @@
+//FILTER EVENT SYSTEM
+const allButton = document.getElementById('allFilter');
+const soccerButton = document.getElementById('soccerFilter');
+const basketballButton = document.getElementById('basketballFilter');
+
+const events = document.querySelectorAll('.container > div');
+
+allButton.addEventListener('click', () => {
+    events.forEach(event => {
+        event.style.display = 'block';
+    });
+});
+
+soccerButton.addEventListener('click', () => {
+    filterEvents('item-container-soccer');
+});
+  
+basketballButton.addEventListener('click', () => {
+    filterEvents('item-container-basketball');
+});
+
+function filterEvents(type) {
+
+    if (!document.querySelector(`.${type}`)) {
+        showError(); 
+        return;
+    }
+
+    events.forEach(event => {
+      if (event.classList.contains(type)) {
+        event.style.display = 'block'; 
+      } else {
+        event.style.display = 'none'; 
+     }
+    });
+}
+
+function showError() {
+    
+    const errorMessage = document.createElement('p');
+    errorMessage.textContent = 'Ce type d\'événement n\'existe pas.';
+    document.body.appendChild(errorMessage);
+  
+    setTimeout(() => {
+      errorMessage.remove();
+    }, 3000); 
+}
+
+//FETCH API SYSTEM
+
 const fetchButton = document.getElementById('fetchData');
 const IdInput = document.getElementById('IdInput');
 const DataDiv = document.getElementById('Data');
