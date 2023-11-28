@@ -85,6 +85,12 @@ body {
    border-radius: 8px;
 }
 
+#errorData {
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+
 .filter-buttons {
     display: flex;
     justify-content: center;

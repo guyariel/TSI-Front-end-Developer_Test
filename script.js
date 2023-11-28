@@ -50,16 +50,15 @@ function showError() {
 
 const fetchButton = document.getElementById('fetchData');
 const IdInput = document.getElementById('IdInput');
-const DataDiv = document.getElementById('Data');
+const errorMsg = document.getElementById('errorData');
 
 fetchButton.addEventListener('click', () => {
     const gameId = IdInput.value.trim(); 
   
-    
     if (gameId) {
       fetchGameData(gameId);
     } else {
-      DataDiv.textContent = 'Veuillez entrer un ID de jeu valide.';
+      errorMsg.textContent = 'Veuillez entrer un ID de match valide.';
     }
 });
   
@@ -79,12 +78,12 @@ function fetchGameData(gameId) {
         const event_date = data.date;
 
         const homeTeamName = data.home_team.full_name;
-        const homeTeamConf = data.home_team.full_name;
+        const homeTeamConf = data.home_team.conference;
         const homeTeamScore = data.home_team_score;
         const homeTeamCity = data.home_team.city;
 
         const visitorTeamName = data.visitor_team.full_name;
-        const visitorTeamConf = data.home_team.full_name;
+        const visitorTeamConf = data.home_team.conference;
         const visitorTeamScore = data.visitor_team_score;
 
         const GameDetailsHTML = 
@@ -112,7 +111,7 @@ function fetchGameData(gameId) {
                                 <i class="far fa-calendar-alt "></i>
                                 ${event_date}   
                             </p>
-
+                            
                             <p class="decription info"> 
                             There are the details about the ${gameId}th game's ID
                             An intense matchup unfolded between the ${homeTeamName} from the ${homeTeamConf}, scoring ${homeTeamScore}, 
@@ -131,6 +130,6 @@ function fetchGameData(gameId) {
       })
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
-        DataDiv.textContent = 'Une erreur est survenue lors de la récupération des données.';
+        errorMsg.textContent = 'Une erreur est survenue lors de la récupération des données.';
     });
 }
