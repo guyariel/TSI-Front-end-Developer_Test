@@ -14,7 +14,7 @@ allButton.addEventListener('click', () => {
 soccerButton.addEventListener('click', () => {
     filterEvents('item-container-soccer');
 });
-  
+
 basketballButton.addEventListener('click', () => {
     filterEvents('item-container-basketball');
 });
