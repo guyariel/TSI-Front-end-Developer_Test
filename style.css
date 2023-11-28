@@ -54,3 +54,11 @@ body {
 .transparent-header nav ul li a:hover {
     color: #ddd; 
 }
+
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+}
