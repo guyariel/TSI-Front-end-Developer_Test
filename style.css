@@ -111,6 +111,17 @@ body {
     cursor: pointer;
 }
 
+.item-container-basketball{
+    position: relative;
+    margin: 24px;
+    width: 320px;
+    height: 570px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 30px 5px rgba(0,0,0, o.15);
+    cursor: pointer;
+}
+
 .img-container,
 .body-container {
     position: absolute;
@@ -139,6 +150,11 @@ body {
 }
 
 .item-container-soccer:hover .overlay {
+    opacity: 1;
+    height: 150px;
+}
+
+.item-container-basketball:hover .overlay {
     opacity: 1;
     height: 150px;
 }
@@ -217,6 +233,10 @@ body {
 }
 
 .item-container-soccer:hover .action{
+    top: 50px;
+}
+
+.item-container-basketball:hover .action{
     top: 50px;
 }
 
