@@ -41,7 +41,7 @@ function fetchGameData(gameId) {
         `
             <div class="item-container item-container-soccer">
                 <div class="img-container">
-                    <img src="./src/images/event-1.jpeg" alt="Event image">
+                    <img src="/src/img/nba.webp" alt="Event image">
                 </div>
 
                 <div class="body-container">
@@ -74,13 +74,11 @@ function fetchGameData(gameId) {
                 </div> 
             </div>
         `
-        
         const container = document.querySelector('.fetch-container');
 
         container.innerHTML = GameDetailsHTML;
 
       })
-      
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
         DataDiv.textContent = 'Une erreur est survenue lors de la récupération des données.';
