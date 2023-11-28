@@ -9,10 +9,9 @@ body {
     margin: 0;
     padding: 0;
     color: #777;
-    background-color: #18537a;
+    background-color: #02121e;
 }
   
-
 .transparent-header {
     top: 0;
     left: 0;
@@ -61,4 +60,24 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 75px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px; 
+}
+  
+.filter-buttons button {
+    padding: 10px 20px; 
+    margin: 0 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #f0f0f0; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+  
+.filter-buttons button:hover {
+    background-color: #e0e0e0; 
 }
