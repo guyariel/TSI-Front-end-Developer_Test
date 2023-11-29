@@ -18,7 +18,7 @@ soccerButton.addEventListener('click', () => {
 basketballButton.addEventListener('click', () => {
     filterEvents('item-container-basketball');
 });
-
+   
 function filterEvents(type) {
 
     if (!document.querySelector(`.${type}`)) {
@@ -111,7 +111,7 @@ function fetchGameData(gameId) {
                                 <i class="far fa-calendar-alt "></i>
                                 ${event_date}   
                             </p>
-                            
+
                             <p class="decription info"> 
                             There are the details about the ${gameId}th game's ID
                             An intense matchup unfolded between the ${homeTeamName} from the ${homeTeamConf}, scoring ${homeTeamScore}, 
