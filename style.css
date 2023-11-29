@@ -115,6 +115,13 @@ header.transparent-header img {
     justify-content: center;
 }
 
+#loading {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .filter-buttons {
     display: flex;
     justify-content: center;
