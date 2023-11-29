@@ -44,6 +44,6 @@ In order to use the API users need to give an ID, spacially an integer in the se
 | :-------- | :------- | :-------------------------------- |
 | `ID`      | `integer` | The ID of the game to retrieve |
 
-####To test the project you just need to open the index.html file 
+#### To test the project you just need to open the index.html file 
 
 
