@@ -90,6 +90,7 @@ function fetchGameData(gameId) {
         const visitorTeamConf = data.home_team.conference;
         const visitorTeamScore = data.visitor_team_score;
 
+        //TEMPLATE FOR THE API RESULTS
         const GameDetailsHTML = 
         `
             <div class="item-container item-container-soccer">

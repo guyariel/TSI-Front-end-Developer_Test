@@ -14,6 +14,8 @@
     <title>Sports Events Listing</title>
 </head>
 <body>
+
+    <!-- HEADER -->
     <header class="transparent-header">
         <div class="container">
             <a href="accueil.html">
@@ -21,18 +23,18 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="accueil.html">Accueil</a></li>
-                    <li><a href="evenements.html">Événements</a></li>
+                    <li><a href="accueil.html">Home</a></li>
+                    <li><a href="evenements.html">Events</a></li>
                     <li><a href="tickets.html">Tickets</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-
+    <!-- SEARCH CONTAINER FOR THE API USES -->
     <div class="wrapper">
         <div id="search-container">
-            <input type="text" id="IdInput" placeholder="Entrez l'ID du jeu">
+            <input type="text" id="IdInput" placeholder="Give an ID">
 
             <button id="fetchData">GO</button> 
         </div>
@@ -42,6 +44,7 @@
 
     <div id="errorData"></div>
     
+    <!-- FILTER BUTTONS-->
     <div class="filter-buttons">
 
         <button id="allFilter">All</button>
@@ -50,6 +53,7 @@
         
     </div>
 
+    <!-- CONTAINER FOR THE API RESULTS -->
     <div class="fetch-container">
         
         <div id="loading" style="display: none;">
@@ -59,7 +63,7 @@
         
     </div>
 
-    
+    <!-- BASIC EVENTS CARDS -->
     <div class="container">
 
         <div class="item-container-soccer">
