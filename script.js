@@ -51,6 +51,7 @@ function showError() {
 const fetchButton = document.getElementById('fetchData');
 const IdInput = document.getElementById('IdInput');
 const errorMsg = document.getElementById('errorData');
+const loadingDiv = document.getElementById('loading');
 
 fetchButton.addEventListener('click', () => {
     const gameId = IdInput.value.trim(); 
@@ -63,6 +64,9 @@ fetchButton.addEventListener('click', () => {
 });
   
 function fetchGameData(gameId) {
+
+  loadingDiv.style.display = 'block';
+
     fetch(`https://www.balldontlie.io/api/v1/games/${gameId}`)
       .then(response => {
         if (!response.ok) {
@@ -127,9 +131,12 @@ function fetchGameData(gameId) {
 
         container.innerHTML = GameDetailsHTML;
 
+        loadingDiv.style.display = 'none';
+
       })
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
+        loadingDiv.style.display = 'none';
         errorMsg.textContent = 'Une erreur est survenue lors de la récupération des données.';
     });
 }
